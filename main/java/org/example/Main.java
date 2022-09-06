@@ -11,9 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     static final String PROGRAM_VERSION = "Version : 1.0 , UpdateDate : 22년 9월 7일";
@@ -25,7 +23,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("옷의 수량을 세는 프로그램을 시작합니다. [ " + PROGRAM_VERSION + " ]");
 
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        Map<String, Integer> map = new TreeMap<>();
 
         Scanner sc = new Scanner(System.in); // 사용자로부터 데이터를 받기 위한 Scanner
 
@@ -111,7 +109,7 @@ public class Main {
 
             //전체 수량도 출력
             String[] totalSum = {
-                    "전체 수량 : ",
+                    "※전체 수량※ : ",
                     String.valueOf(clothesTotalQuantity),
             };
             writer.writeNext(totalSum,false);
