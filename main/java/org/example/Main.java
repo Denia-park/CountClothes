@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Main {
-    static final String PROGRAM_VERSION = "Version : 1.0 , UpdateDate : 22년 9월 7일";
+    static final String PROGRAM_VERSION = "Version : 1.1 , UpdateDate : 22년 9월 25일";
     static String fileNameCSV = getStringOfNowLocalDateTime();
     static final int PRODUCT_NAME_CELL_INDEX = 1; //B [0부터 시작임.]
     static final int PRODUCT_OPTION_CELL_INDEX = 2; //C [0부터 시작임.]
