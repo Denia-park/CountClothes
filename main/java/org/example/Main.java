@@ -93,7 +93,8 @@ public class Main {
         ) {
             //제목 저장
             String[] title = {
-                    "상품명 [옵션 포함]",
+                    "상품명",
+                    "옵션",
                     "수량",
             };
             writer.writeNext(title,false);
@@ -103,7 +104,12 @@ public class Main {
                 int mapValue = entrySet.getValue();
                 clothesTotalQuantity += mapValue;
 
-                String[] data = {entrySet.getKey(), String.valueOf(mapValue)};
+                String[] productInfo = entrySet.getKey().split("/");
+                String productName = productInfo[0];
+                String productOption = productInfo[1];
+
+                String[] data = {productName, productOption, String.valueOf(mapValue)};
+
                 writer.writeNext(data, false);
             }
 
